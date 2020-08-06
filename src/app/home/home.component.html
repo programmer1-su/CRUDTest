@@ -1,0 +1,17 @@
+<a>
+    + Add Employee
+</a>
+
+<h1>
+    Employees
+</h1>
+<table>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Position</th>
+    <tr *ngFor = "let employee of employees">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.position}}</td>
+    </tr>
+</table>
