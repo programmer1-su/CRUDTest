@@ -1,4 +1,4 @@
-<a>
+<a routerLink='/employee'>
     + Add Employee
 </a>
 
@@ -9,9 +9,11 @@
     <th>ID</th>
     <th>Name</th>
     <th>Position</th>
+    <th></th>
     <tr *ngFor = "let employee of employees">
         <td>{{employee.id}}</td>
         <td>{{employee.name}}</td>
         <td>{{employee.position}}</td>
+        <td (click)="deleteEvent(employee.id)"><a>削除</a></td>
     </tr>
 </table>
