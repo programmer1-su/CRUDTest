@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http,Response,Headers } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+//import 'rxjs/add/operator/toPromise';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -22,8 +22,8 @@ export class HomeComponent implements OnInit {
     )
   }
 
-  deleteEvent = function(id) {
-    if(confirm("本当ですか？")){
+  deleteEmployee = function(id) {
+    if(confirm("削除しますか？")){
       const url = `${"http://localhost:3333/employees"}/${id}`;
       return this.http.delete(url,{headers: this.headers}).toPromise()
       .then(() =>{

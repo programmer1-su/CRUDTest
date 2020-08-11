@@ -9,12 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { HttpModule} from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmployeeComponent } from './employee/employee.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    UpdateEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { EmployeeComponent } from './employee/employee.component';
     HttpModule,
     RouterModule.forRoot([
     {path: "",component: HomeComponent},
-    {path: "employee",component: EmployeeComponent}
+    {path: "employee",component: EmployeeComponent},
+    {path: "updateEmployee/:id",component: UpdateEmployeeComponent}
     ]),
     BrowserAnimationsModule
   ],

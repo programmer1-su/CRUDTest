@@ -10,10 +10,12 @@
     <th>Name</th>
     <th>Position</th>
     <th></th>
+    <th></th>
     <tr *ngFor = "let employee of employees">
         <td>{{employee.id}}</td>
         <td>{{employee.name}}</td>
         <td>{{employee.position}}</td>
-        <td (click)="deleteEvent(employee.id)"><a>削除</a></td>
+        <td (click)="deleteEmployee(employee.id)"><a>削除</a></td>
+        <td [routerLink]= "['/updateEmployee', employee.id]"><a>編集</a></td>
     </tr>
 </table>
